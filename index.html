@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meetup Events</title>
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+    <link rel='stylesheet' type='text/css' href='paper.css'/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="script.js"></script>
+  <style>@page { size: A5 }</style>
+</head>
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <section class="sheet padding-10mm">
+  <div class="entry">
+    <h1>{{name}}</h1>
+    <h2>{{yes_rsvp_count}} attendees</h2>
+    <h2>{{venue.name}}</h2>
+    <h2>{{formatDate time}}</h2>
+    <div class="body">
+      {{{description}}}
+    </div>
+  </div>
+  </section>
+</script>
+
+<body class="main" class="A5">
 Hello World
+</body>
+</html>
