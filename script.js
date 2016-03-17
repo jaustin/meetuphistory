@@ -14,7 +14,15 @@ $.ajax({
     dataType: 'jsonp',
     success: function (data) { 
        $.each(data.data, function(index, element) {
-            $('body').append(template(element));
+            if (element.name.lastIndexOf("See the space", 0) != 0
+                & (element.name.lastIndexOf("Thursday Pub", 0) != 0)
+                & (element.name.lastIndexOf("See the Space", 0) != 0)
+                & (element.name.lastIndexOf("Family Makers", 0) != 0)
+                & (element.name.lastIndexOf("K1 Cohousing", 0) != 0)
+                & (element.name.lastIndexOf("OpenDCU.org", 0) != 0)
+                ) {
+            	$('body').append(template(element));
+	}
         });
     }
 });

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Meetup Events</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
     <link rel='stylesheet' type='text/css' href='paper.css'/>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -14,10 +15,22 @@
 <script id="entry-template" type="text/x-handlebars-template">
   <section class="sheet padding-10mm">
   <div class="entry">
-    <h1>{{name}}</h1>
-    <h2>{{yes_rsvp_count}} attendees</h2>
-    <h2>{{venue.name}}</h2>
-    <h2>{{formatDate time}}</h2>
+    <div class="top">
+    <div class="row">
+    <div class="col-md-12">
+    <h1 style="color: #FF6600;">
+    <div style="display: table-cell; float: right; opacity: 0.7" class="text-right">{{venue.name}}</div>
+    <div style="display: table-cell;">{{name}}</div>
+    </h1>
+    </div>
+    </div>
+    <h2 style="font-size: 30px; color: #7DB800; margin-top: 0px; margin-bottom: 30px;">
+    <div class="row">
+      <div class="col-md-6">{{yes_rsvp_count}} attended</div>
+      <div class="col-md-6 text-right">{{formatDate time}}</div>
+    </div>
+    </h2>
+    </div>
     <div class="body">
       {{{description}}}
     </div>
@@ -26,6 +39,5 @@
 </script>
 
 <body class="main" class="A5">
-Hello World
 </body>
 </html>
