@@ -18,24 +18,23 @@
 </head>
 
 <script id="entry-template" type="text/x-handlebars-template">
-  <section class="sheet padding-10mm">
-  <div class="entry" >
+  <section class="sheet padding-25-10mm">
+  <div class="entry_notapplied" >
     <div class="top">
     <div class="row">
-    <h1 style="color: #FF6600;">
+    <h2 style="color: #FF6600;">
     <!--- <div style="display: table-cell; float: right; opacity: 0.7" class="text-right">{{venue.name}}</div> -->
     <div class="col-xs-8">{{name}}</div>
     <div class="col-xs-4 text-right" style="opacity: 0.6" >{{venue.name}}</div>
-    </h1>
-    </div>
-    </div>
-    <h2 style="font-size: 30px; color: #7DB800; margin-top: 0px; margin-bottom: 30px;">
-    <div class="row">
-      <div class="col-xs-6">{{yes_rsvp_count}} attended</div>
-      <div class="col-xs-6 text-right">{{formatDate time}}</div>
-    </div>
     </h2>
     </div>
+    </div>
+    <h2 style="font-size: 24px; color: #7DB800; margin-top: 0px; margin-bottom: 30px;">
+    <div class="row">
+      <div class="col-xs-4">{{yes_rsvp_count}} attended</div>
+      <div class="col-xs-8 text-right">{{formatDate time}}</div>
+    </div>
+    </h2>
     <div class="body">
       {{{description}}}
     </div>
@@ -43,7 +42,11 @@
   </section>
 </script>
 
-<body class="main" class="A5 landscape">
-  <!--- <section class="sheet padding-10mm"> -->
+<body class="main" class="A5 landscape" id="pages">
+<!--
+<section class="sheet padding-25-10mm" id="pages">
+
+</section>
+-->
 </body>
 </html>
